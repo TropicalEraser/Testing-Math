@@ -39,7 +39,7 @@ public class MathTest {
 
     public void testReciprocal(double base, double exponent) {
 
-        assertEquals(1 / (Math.pow(base, -1 * exponent)), Math.pow(base, exponent));
+        assertEquals(1 / (Math.pow(base, exponent)), Math.pow(base, -exponent));
         //x-a = 1/xa
 
 
