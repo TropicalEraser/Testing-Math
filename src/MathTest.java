@@ -36,8 +36,10 @@ public class MathTest {
             "1.4, 1",
             "4, 1"
     })
+
     public void testReciprocal(double base, double exponent) {
 
+        assertEquals(1 / (Math.pow(base, -1 * exponent)), -1 * Math.pow(base, exponent));
         //x-a = 1/xa
 
 
@@ -60,6 +62,8 @@ public class MathTest {
             "-7.4, -8.3, -9.2"
     })
     public void testMultiplying(double base, double a, double b) {
+
+
         //xa * xb = xa+b
     }
 
@@ -80,6 +84,7 @@ public class MathTest {
             "-7.4, -8.3, -9.2"
     })
     public void testDividing(double base, double a, double b) {
+        assertEquals(Math.pow(base, a - b), Math.pow(base, a) - Math.pow(base, b));
         //xa / xb = xa-b
     }
 
@@ -122,9 +127,5 @@ public class MathTest {
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testZeroBase(double exponent) {
         //0x = 0
-    }
-
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
     }
 }
