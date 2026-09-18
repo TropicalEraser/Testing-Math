@@ -39,7 +39,7 @@ public class MathTest {
 
     public void testReciprocal(double base, double exponent) {
 
-        assertEquals(1 / (Math.pow(base, -1 * exponent)), -1 * Math.pow(base, exponent));
+        assertEquals(1 / (Math.pow(base, -1 * exponent)), Math.pow(base, exponent), 0.000001);
         //x-a = 1/xa
 
 
@@ -113,6 +113,7 @@ public class MathTest {
     @ParameterizedTest
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testZeroPower(double base) {
+
         //x0 = 1
     }
 
