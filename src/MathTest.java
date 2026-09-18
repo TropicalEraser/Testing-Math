@@ -121,6 +121,7 @@ public class MathTest {
     @ParameterizedTest
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testOnePower(double base) {
+        assertEquals(base, Math.pow(base, 1));
         //x1 = x
     }
 
