@@ -84,7 +84,7 @@ public class MathTest {
             "-7.4, -8.3, -9.2"
     })
     public void testDividing(double base, double a, double b) {
-        assertEquals(Math.pow(base, a - b), Math.pow(base, a) - Math.pow(base, b));
+        assertEquals(Math.pow(base, a - b), Math.pow(base, a) / Math.pow(base, b), 0.000001);
         //xa / xb = xa-b
     }
 
