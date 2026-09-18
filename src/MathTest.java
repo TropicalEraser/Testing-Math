@@ -63,7 +63,7 @@ public class MathTest {
     })
     public void testMultiplying(double base, double a, double b) {
 
-
+        assertEquals(Math.pow(base, a + b), Math.pow(base, a) + Math.pow(base, b));
         //xa * xb = xa+b
     }
 
