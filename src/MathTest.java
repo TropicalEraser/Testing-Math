@@ -63,7 +63,7 @@ public class MathTest {
     })
     public void testMultiplying(double base, double a, double b) {
 
-        assertEquals(Math.pow(base, a + b), Math.pow(base, a) * Math.pow(base, b), 0.000001);
+        assertEquals(Math.pow(base, a + b), Math.pow(base, a) * Math.pow(base, b));
         //xa * xb = xa+b
     }
 
@@ -84,7 +84,7 @@ public class MathTest {
             "-7.4, -8.3, -9.2"
     })
     public void testDividing(double base, double a, double b) {
-        assertEquals(Math.pow(base, a - b), Math.pow(base, a) / Math.pow(base, b), 0.000001);
+        assertEquals(Math.pow(base, a - b), Math.pow(base, a) / Math.pow(base, b));
         //xa / xb = xa-b
     }
 
@@ -105,7 +105,7 @@ public class MathTest {
             "-7.4, -8.3, -9.2"
     })
     public void testNestedPowers(double base, double a, double b) {
-        assertEquals(Math.pow(base, a * b), Math.pow(Math.pow(base, a), b), 0.000001);
+        assertEquals(Math.pow(base, a * b), Math.pow(Math.pow(base, a), b));
         //(xa)b = xa*b
     }
 
